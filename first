@@ -18,3 +18,4 @@ for((i=0;i<10;i++)); do
         break
     fi      
 done       
+#可以简化代码
