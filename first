@@ -1,0 +1,20 @@
+#!/bin/bash
+# 生成0到100之间的随机数
+random_number=$(( RANDOM % 101 ))
+echo "随机数: $random_number"
+echo "enter a number:"
+read -r number
+for((i=0;i<10;i++)); do
+    if [[ $number -lt $random_number ]]; then 
+        echo "too small"
+        echo "enter a number:"
+        read -r number
+    elif [[ $number -gt $random_number ]]; then
+        echo "too big"
+        echo "enter a number:"
+        read -r number
+    else
+        echo "you are right"
+        break
+    fi      
+done       
